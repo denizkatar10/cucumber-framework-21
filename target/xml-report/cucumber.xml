@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="16.451">
+    <testcase classname="Room_reservation_with_datatables" name="TC01_user_should_be_able_to_login_with_manager_profile" time="11.315">
+        <system-out>
+            <![CDATA[Given user is on the application_login page.................................passed
+Given user enters manager_username and manager_password.....................passed
+Then capture the screenshot.................................................passed
+And clicks on login button..................................................passed
+And verify login "manager" is displayed.....................................passed
+And user navigates to create_room_reservation_page..........................passed
+Then capture the screenshot.................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Room_reservation_with_datatables" name="TC02_user_should_be_able_to_make_reservation" time="4.782">
+        <system-out>
+            <![CDATA[Given user enters all required fields.......................................passed
+And user clicks on the approved checkbox....................................passed
+And user clicks on the is_paid checkbox.....................................passed
+And user clicks on the save_button..........................................passed
+Then user verifies the success_message......................................passed
+Then capture the screenshot.................................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
