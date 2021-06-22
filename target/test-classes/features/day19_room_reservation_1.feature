@@ -23,3 +23,4 @@ Feature: Manager should create a reservation
     And user clicks on the is_paid checkbox
     And user clicks on the save_button
     Then user verifies the success_message
+    Then close the application
