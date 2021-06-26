@@ -1,4 +1,5 @@
 package stepdefinitions;
+
 import com.github.javafaker.Faker;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -58,11 +59,14 @@ public class Room_Reservation_Step_Defs {
     }
     @Given("user enters the contact_name")
     public void user_enters_the_contact_name() {
+
         roomReservationPage.nameAndSurname.sendKeys(faker.name().firstName());
+
     }
     @Given("user enters the contact_phone")
     public void user_enters_the_contact_phone() {
         roomReservationPage.contactPhone.sendKeys(faker.phoneNumber().phoneNumber());
+
     }
     @Given("user enters the contact_email")
     public void user_enters_the_contact_email() {
@@ -83,12 +87,15 @@ public class Room_Reservation_Step_Defs {
     @Given("user clicks on the save_button")
     public void user_clicks_on_the_save_button() {
         roomReservationPage.saveButton.click();
+
     }
     @Then("user verifies the success_message")
     public void user_verifies_the_success_message() {
         ReusableMethods.waitForVisibility(roomReservationPage.actualSuccessMessage,3);
         Assert.assertTrue(roomReservationPage.actualSuccessMessage.isDisplayed());
+
     }
+
     //    BELOW IS DONE WITH SCENARIO OUTLINE
     @Given("user enters the IDUser {string}")
     public void user_enters_the_id_user(String string) {
@@ -100,6 +107,7 @@ public class Room_Reservation_Step_Defs {
     public void user_enters_the_id_hotel(String string) {
         Select select =new Select(roomReservationPage.idHotelRoom);
         select.selectByVisibleText(string);
+
     }
     @Given("user enters the price {string}")
     public void user_enters_the_price(String string) {
@@ -108,6 +116,7 @@ public class Room_Reservation_Step_Defs {
     @Given("user enters the date_start {string}")
     public void user_enters_the_date_start(String string) {
         roomReservationPage.dateStart.sendKeys(string);
+
     }
     @Given("user enters the date_end {string}")
     public void user_enters_the_date_end(String string) {
@@ -143,14 +152,18 @@ public class Room_Reservation_Step_Defs {
         Assert.assertEquals(roomReservationPage.actualSuccessMessage.getText(),string);
         roomReservationPage.okButton.click();
     }
+
     @Given("user enters all required fields")
     public void user_enters_all_required_fields(DataTable roomData) {
         List<String> testData=roomData.row(1);
         System.out.println(testData);//[manager, Sierra, 500, 08/01/2021, 08/04/2021, 2, 3, john, 999999999, test@gmail.com, test]
         Select select = new Select(roomReservationPage.idUser);
         select.selectByVisibleText(testData.get(0));
+
+
         Select select1 =new Select(roomReservationPage.idHotelRoom);
         select1.selectByVisibleText(testData.get(1));
+
         roomReservationPage.price.sendKeys(testData.get(2));
         roomReservationPage.dateStart.sendKeys(testData.get(3));
         roomReservationPage.dateEnd.sendKeys(testData.get(4));
@@ -161,8 +174,10 @@ public class Room_Reservation_Step_Defs {
         roomReservationPage.contactEmail.sendKeys(testData.get(9));
         roomReservationPage.notes.sendKeys(testData.get(10));
     }
+
     @Then("capture the screenshot")
     public void capture_the_screenshot() throws IOException {
         ReusableMethods.getScreenshot("Taking Screen Shot ");
     }
+
 }

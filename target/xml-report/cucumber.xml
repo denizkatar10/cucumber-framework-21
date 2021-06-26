@@ -1,25 +1,109 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="16.451">
-    <testcase classname="Room_reservation_with_datatables" name="TC01_user_should_be_able_to_login_with_manager_profile" time="11.315">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="72.618">
+    <testcase classname="Search Functionality" name="TC01_Iphone Search" time="11.89">
         <system-out>
-            <![CDATA[Given user is on the application_login page.................................passed
-Given user enters manager_username and manager_password.....................passed
-Then capture the screenshot.................................................passed
-And clicks on login button..................................................passed
-And verify login "manager" is displayed.....................................passed
-And user navigates to create_room_reservation_page..........................passed
-Then capture the screenshot.................................................passed
+            <![CDATA[Given user in on the google page............................................passed
+And user search for iPhone..................................................passed
+Then verify the result has iPhone...........................................passed
+Then close the application..................................................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Room_reservation_with_datatables" name="TC02_user_should_be_able_to_make_reservation" time="4.782">
+    <testcase classname="Search Functionality" name="TC02_tea pot Search" time="8.265">
         <system-out>
-            <![CDATA[Given user enters all required fields.......................................passed
+            <![CDATA[Given user in on the google page............................................passed
+And user search for tea pot.................................................passed
+Then verify the result has tea pot..........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Search Functionality" name="TC03_flower Search" time="8.085">
+        <system-out>
+            <![CDATA[Given user in on the google page............................................passed
+And user search for flower..................................................passed
+Then verify the result has flower...........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User_should_be_able_to_reserve_room" name="TC_01_login_with_manager_profile" time="18.23">
+        <system-out>
+            <![CDATA[Given user is on the application_login page.................................passed
+And user enters manager_id "manager"........................................passed
+And user enters manager_password "Manager1!"................................passed
+And clicks on login button..................................................passed
+And verify login "manager" is displayed.....................................passed
+Given user navigates to create_room_reservation_page........................passed
+And user enters the IDUser "manager"........................................passed
+And user enters the IDHotel "Sierra"........................................passed
+And user enters the price "1000"............................................passed
+And user enters the date_start "07/01/2021".................................passed
+And user enters the date_end "07/03/2021"...................................passed
+And user enters the adult_amount "2"........................................passed
+And user enters the children_amount "3".....................................passed
+And user enters the contact_name "test".....................................passed
+And user enters the contact_phone "(546) 345-6345"..........................passed
+And user enters the contact_email "test@gmail.com"..........................passed
+And user enters the notes "test"............................................passed
 And user clicks on the approved checkbox....................................passed
 And user clicks on the is_paid checkbox.....................................passed
 And user clicks on the save_button..........................................passed
-Then user verifies the success_message......................................passed
-Then capture the screenshot.................................................passed
+Then user verifies the success_message "RoomReservation was inserted successfully".passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User_should_be_able_to_reserve_room" name="TC_01_login_with_manager_profile_2" time="12.999">
+        <system-out>
+            <![CDATA[Given user is on the application_login page.................................passed
+And user enters manager_id "manager"........................................passed
+And user enters manager_password "Manager1!"................................passed
+And clicks on login button..................................................passed
+And verify login "manager" is displayed.....................................passed
+Given user navigates to create_room_reservation_page........................passed
+And user enters the IDUser "manager"........................................passed
+And user enters the IDHotel "Krystel".......................................passed
+And user enters the price "250".............................................passed
+And user enters the date_start "07/01/2021".................................passed
+And user enters the date_end "08/01/2021"...................................passed
+And user enters the adult_amount "1"........................................passed
+And user enters the children_amount "0".....................................passed
+And user enters the contact_name "My Boss"..................................passed
+And user enters the contact_phone "(999) 345-6345"..........................passed
+And user enters the contact_email "alone@gmail.com".........................passed
+And user enters the notes "Don't bother"....................................passed
+And user clicks on the approved checkbox....................................passed
+And user clicks on the is_paid checkbox.....................................passed
+And user clicks on the save_button..........................................passed
+Then user verifies the success_message "RoomReservation was inserted successfully".passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User_should_be_able_to_reserve_room" name="TC_01_login_with_manager_profile_3" time="12.406">
+        <system-out>
+            <![CDATA[Given user is on the application_login page.................................passed
+And user enters manager_id "manager"........................................passed
+And user enters manager_password "Manager1!"................................passed
+And clicks on login button..................................................passed
+And verify login "manager" is displayed.....................................passed
+Given user navigates to create_room_reservation_page........................passed
+And user enters the IDUser "manager"........................................passed
+And user enters the IDHotel "Karelle".......................................passed
+And user enters the price "100".............................................passed
+And user enters the date_start "07/01/2021".................................passed
+And user enters the date_end "07/02/2021"...................................passed
+And user enters the adult_amount "2"........................................passed
+And user enters the children_amount "1".....................................passed
+And user enters the contact_name "My Boss"..................................passed
+And user enters the contact_phone "(999) 345-6345"..........................passed
+And user enters the contact_email "both@gmail.com"..........................passed
+And user enters the notes "one day reservation".............................passed
+And user clicks on the approved checkbox....................................passed
+And user clicks on the is_paid checkbox.....................................passed
+And user clicks on the save_button..........................................passed
+Then user verifies the success_message "RoomReservation was inserted successfully".passed
 Then close the application..................................................passed
 ]]>
         </system-out>

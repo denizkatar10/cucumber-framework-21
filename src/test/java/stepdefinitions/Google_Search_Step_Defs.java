@@ -37,6 +37,7 @@ public class Google_Search_Step_Defs {
     }
     @Given("user search for flower")
     public void user_search_for_flower() {
+
         googlePage.googleSearchBox.sendKeys("flower"+ Keys.ENTER);
     }
     @Then("verify the result has flower")

@@ -1,4 +1,4 @@
-@manager_login
+@manager_login @regression
 Feature: Manger_login_test
   Scenario: TC_01_reservation_manager_profile
     Given user is on the application_login page

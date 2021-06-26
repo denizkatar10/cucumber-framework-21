@@ -1,4 +1,4 @@
-@google_search_parameters
+@google_search_parameters @regression
 Feature: Finding product on google search
   Background: use is navigate to google page
     Given user in on the google page
