@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="95.484">
+    <testcase classname="Manger_login_test" name="TC_01_reservation_manager_profile" time="17.326">
+        <system-out>
+            <![CDATA[Given user is on the application_login page.................................passed
+And user enters manager_id "manager"........................................passed
+And user enters manager_password "Manager1!"................................passed
+And clicks on login button..................................................passed
+And verify login "manager" is displayed.....................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manger_login_test" name="TC_02_reservation_manager_profile" time="12.953">
+        <system-out>
+            <![CDATA[Given user is on the application_login page.................................passed
+And user enters manager_id "manager2".......................................passed
+And user enters manager_password "Manager2!"................................passed
+And clicks on login button..................................................passed
+And verify login "manager2" is displayed....................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manger_login_test" name="TC_03_reservation_manager_profile" time="13.115">
+        <system-out>
+            <![CDATA[Given user is on the application_login page.................................passed
+And user enters manager_id "manager3".......................................passed
+And user enters manager_password "Manager3!"................................passed
+And clicks on login button..................................................passed
+And verify login "manager3" is displayed....................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Finding product on google search" name="TC01_iphone_search" time="10.179">
+        <system-out>
+            <![CDATA[Given user in on the google page............................................passed
+Given user search for "iPhone"..............................................passed
+Then verify the result has "iPhone".........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Finding product on google search" name="TC02_bmw_search" time="10.698">
+        <system-out>
+            <![CDATA[Given user in on the google page............................................passed
+Given user search for "bmw".................................................passed
+Then verify the result has "bmw"............................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Finding product on google search" name="TC03_tesla_search" time="7.84">
+        <system-out>
+            <![CDATA[Given user in on the google page............................................passed
+Given user search for "tesla"...............................................passed
+Then verify the result has "tesla"..........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manager should create a reservation" name="TC01_manager_should_create_hotel_reservation" time="22.507">
+        <system-out>
+            <![CDATA[Given user is on the application_login page.................................passed
+And user enters manager_id "manager"........................................passed
+And user enters manager_password "Manager1!"................................passed
+And clicks on login button..................................................passed
+And verify login "manager" is displayed.....................................passed
+And user navigates to create_room_reservation_page..........................passed
+And user enters the IDUser..................................................passed
+And user enters the IDHotel.................................................passed
+And user enters the price...................................................passed
+And user enters the date_start..............................................passed
+And user enters the date_end................................................passed
+And user enters the adult_amount............................................passed
+And user enters the children_amount.........................................passed
+And user enters the contact_name............................................passed
+And user enters the contact_phone...........................................passed
+And user enters the contact_email...........................................passed
+And user enters the notes...................................................passed
+And user clicks on the approved checkbox....................................passed
+And user clicks on the is_paid checkbox.....................................passed
+And user clicks on the save_button..........................................passed
+Then user verifies the success_message......................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
